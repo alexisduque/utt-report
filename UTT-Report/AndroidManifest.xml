@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uttreport.ui"
+    android:uiOptions="splitActionBarWhenNarrow"
+    android:versionCode="3"
+    android:versionName="1.2" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+	<supports-screens android:smallScreens="false"
+                  android:normalScreens="false"
+                  android:largeScreens="false"
+                  android:xlargeScreens="true"
+                  android:requiresSmallestWidthDp="600" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:uiOptions="splitActionBarWhenNarrow" >
+        <activity
+            android:name="uttreport.ui.MeetingListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="uttreport.ui.MeetingDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_meeting_detail"
+            android:parentActivityName="uttreport.ui.MeetingListActivity"
+            android:screenOrientation="landscape" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MeetingListActivity" />
+        </activity>
+        <activity
+            android:name="uttreport.ui.AddMeeting"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_add_meeting"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="uttreport.ui.ManageItems"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_manage_items"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="uttreport.ui.ColorPickerDialog"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_color_picker_dialog"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="uttreport.ui.WebView"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_web_view"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="uttreport.ui.WebActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_web"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="uttreport.ui.RecorderActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_recorder"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="uttreport.ui.TagActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_tag"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="uttreport.ui.ManageWcItems"
+            android:label="@string/title_activity_manage_wc_items"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="uttreport.ui.LoginWc"
+            android:label="@string/title_activity_login_wc"
+            android:windowSoftInputMode="adjustResize|stateVisible"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="uttreport.ui.LoginWindchill"
+            android:label="@string/title_activity_login_windchill"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+    </application>
+
+</manifest>
